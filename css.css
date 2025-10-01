@@ -1,0 +1,361 @@
+/*
+|-----------------------------------------------------------
+| COLORES GOURMET AHUMADO
+|-----------------------------------------------------------
+| --color-mostaza: #FFC300 (Acento Principal/CTA)
+| --color-rojo: #E53935 (Acento Secundario/Títulos)
+| --color-oscuro: #1D1D1D (Fondo Oscuro/Texto Principal)
+| --color-crema: #F5F5F5 (Fondo Claro/Texto Secundario)
+*/
+
+:root {
+    --color-mostaza: #FFC300;
+    --color-rojo: #E53935;
+    --color-oscuro: #1D1D1D;
+    --color-crema: #F5F5F5;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* -------------------- RESET BÁSICO Y TIPOGRAFÍA -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-oscuro);
+    background-color: #ffffff; /* Fondo blanco puro para secciones claras */
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+h1 { font-size: 3.5rem; color: var(--color-rojo); }
+h2 { font-size: 2.5rem; color: var(--color-oscuro); margin-bottom: 1.5rem; }
+h3 { font-size: 1.8rem; }
+p { font-size: 1.1rem; line-height: 1.6; }
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* -------------------- HEADER Y NAVEGACIÓN -------------------- */
+.main-header {
+    background-color: #ffffff; /* Light background for the header */
+    padding: 15px 20px;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Vertically align items in the center */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.main-header .logo {
+    display: flex; /* Flexbox for logo and text */
+    align-items: center;
+    font-family: Arial, sans-serif; /* Example font */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* Darker text color */
+}
+
+.main-header .logo img {
+    height: 50px; /* Adjust logo height as needed */
+    margin-right: 15px; /* Space between logo and text */
+    border-radius: 5px; /* Slightly rounded corners for the logo */
+}
+
+.main-header .message {
+    margin-left: auto; /* Pushes the message to the right */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    color: #555;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* -------------------- HERO SECTION -------------------- */
+.hero-section {
+    position: relative;
+    height: 70vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* RUTA: Reemplaza con una imagen de alta calidad de hamburguesas */
+    background: url('ruta/a/fondo-hamburguesa.jpg') no-repeat center center/cover; 
+    filter: brightness(0.7); /* Oscurece un poco el fondo para que el texto resalte */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    color: var(--color-crema);
+    padding: 20px;
+}
+
+.tagline {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-mostaza);
+    margin-bottom: 10px;
+}
+
+.hero-section h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    color: var(--color-mostaza);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.hero-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--color-crema);
+}
+
+/* -------------------- BOTONES CTA -------------------- */
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+.primary-cta {
+    background-color: var(--color-mostaza);
+    color: var(--color-oscuro);
+    box-shadow: 0 4px 15px rgba(255, 195, 0, 0.5);
+}
+
+.primary-cta:hover {
+    background-color: var(--color-rojo);
+    color: var(--color-crema);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(229, 57, 53, 0.6);
+}
+
+.secondary-cta {
+    background-color: transparent;
+    color: var(--color-rojo);
+    border: 2px solid var(--color-rojo);
+    margin-top: 30px;
+}
+
+.secondary-cta:hover {
+    background-color: var(--color-rojo);
+    color: var(--color-crema);
+}
+
+/* -------------------- SECCIONES GENERALES -------------------- */
+.section {
+    padding: 80px 0;
+}
+
+.section h2 {
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 30px auto 0;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* -------------------- FEATURE GRID (¿QUÉ ES?) -------------------- */
+.feature-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.feature-card {
+    flex-basis: 30%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: var(--color-crema);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-rojo);
+}
+
+.feature-card h4 {
+    color: var(--color-oscuro);
+    margin-bottom: 10px;
+}
+
+/* -------------------- GALERÍA DE MENÚS (DARK BACKGROUND) -------------------- */
+.dark-bg {
+    background-color: var(--color-oscuro);
+    color: var(--color-crema);
+}
+
+.dark-bg h2 {
+    color: var(--color-mostaza);
+}
+
+.burger-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.burger-card {
+    background-color: var(--color-oscuro);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--color-rojo); /* Borde de acento */
+    transition: transform 0.3s ease;
+}
+
+.burger-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-mostaza);
+}
+
+.burger-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-info {
+    padding: 20px;
+}
+
+.card-info h3 {
+    color: var(--color-crema);
+    margin-bottom: 5px;
+}
+
+.card-info p {
+    font-size: 0.95rem;
+    color: #cccccc; /* Un gris claro para el detalle */
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-mostaza);
+    margin-top: 10px;
+}
+
+/* -------------------- VOTACIÓN -------------------- */
+#vota {
+    text-align: center;
+    background-color: var(--color-crema);
+    border-top: 5px dashed var(--color-mostaza);
+}
+
+/* -------------------- FOOTER -------------------- */
+.footer {
+    background-color: var(--color-oscuro);
+    color: #aaaaaa;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-links a {
+    color: var(--color-mostaza);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-rojo);
+}
+
+.hashtag {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-crema);
+    margin-top: 10px;
+}
+
+/* -------------------- MEDIA QUERIES (RESPONSIVE) -------------------- */
+@media (max-width: 900px) {
+    .feature-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .feature-card {
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}
